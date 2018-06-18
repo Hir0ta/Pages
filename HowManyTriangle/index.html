@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by HirOta-kun (http://jsbin.com/milazag/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>How many triangle</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+var cw = canvas.width;
+var ch = canvas.height;
+var x1;
+var y1=ch/2;
+var x2;
+var y2;
+
+for(x1=0; x1<=cw; x1++){
+  if (x1 % 4 == 0){
+    x2 = 0;
+    y2 = 0;
+  }else if (x1 % 4 == 1){
+    x2 = cw;
+    y2 = 0;
+  }else if (x1 % 4 == 2){
+    x2 = 0;
+    y2 = ch;
+  }else {
+    x2 = cw;
+    y2 = ch;
+  }
+  context.strokeStyle= 'blue';
+  context.beginPath();
+  context.moveTo(x1,y1);
+  context.lineTo(x2,y2);
+  context.fill();
+  context.stroke();
+}
+</script>
+</body>
+</html>

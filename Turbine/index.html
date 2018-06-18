@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="turbine.js"></script>
+  <title>Turbine Check</title>
+</head>
+<body>
+  <script id= "turbineCounter">
+    var maxTurbines=25;
+    var turbinePower=0;
+    var sumPower=0;
+    var x=1;
+    for (x; x<=maxTurbines; x++){
+      if (x<=10) {
+        turbinPower=2000;
+        sumPower+=turbinPower;
+        console.log ('A(z) ' +  x + '. számú szélturbina teljes fordulaton működik, ' + turbinePower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
+      }else if (x<=20) {
+        turbinPower=1000;
+        sumPower+=turbinPower;
+        console.log ('A(z) '+ x + '.számú szélturbina fél fordulaton működik, ' + turbinPower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
+      }else {
+        turbinePower=0;
+        sumPower+=turbinePower;
+        console.log ('A(z) ' + x + '. számú szélturbina áll, '+ turbinePower + 'MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
+      }
+    }
+  </script>
+
+</body>
+</html>

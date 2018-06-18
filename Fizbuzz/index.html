@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by HirOta-kun (http://jsbin.com/vuxuhij/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Fizbuzz</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+var x=15;
+var y=15;
+var width=x*2;
+var height=y*2;
+var multi=1;
+var color;
+
+
+
+while (multi <= 15){
+  if(multi%15==0){
+    color = 'rgba(0, 255, 0, 0.4)';
+  }else if (multi%5==0){
+    color = 'rgba(255, 255, 0, 0.4)';
+  }else if(multi%3==0){
+    color = 'rgba(0, 0, 255, 0.4)';
+  }else{
+    color = 'rgba(0, 0, 0, 0.3)';
+  }
+  context.fillStyle = color;
+
+  context.fillRect(x*multi,y*multi,height,width);
+  multi++;
+}
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by HirOta-kun (http://jsbin.com/mabugos/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Stairs</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+var counterX=0;
+var counterY=0;
+var x0=10;
+var y0=15;
+var x;
+var y;
+var w=50;
+var h=50;
+var space=5;
+
+context.fillStyle='red';
+for(i=0;i<5;i++){
+  y=y0+i*(h+space);
+  for(j=0;j<=i;j++){
+    x=x0+j*(w+space);
+    context.fillRect(x,y,w,h);
+  }
+}
+
+
+</script>
+</body>
+</html>

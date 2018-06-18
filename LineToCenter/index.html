@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by HirOta-kun (http://jsbin.com/jubesur/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Line to center</title>
+</head>
+<body>
+  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+
+var centerX = canvas.width/2;
+var centerY = canvas.height/2;
+
+
+var random = function(max, min) {
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+
+function lineToCenter(x,y,color){  
+  ctx.beginPath();
+  ctx.moveTo(x,y);
+  ctx.lineTo(centerX,centerY);
+  ctx.strokeStyle= color;
+  ctx.stroke();
+  return;
+}
+
+for(i=0;i<=100;i++){
+lineToCenter(random(canvas.width,0),random(canvas.height,0),'red');
+}
+
+</script>
+</body>
+</html>
