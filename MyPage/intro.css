@@ -1,0 +1,93 @@
+/* CSS reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+/* Styles */
+body{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background: url(http://blog.hostbaby.com/wp-content/uploads/2013/07/scuffedstatic_dark1400x900.jpg) no-repeat center center fixed;
+    background-size:cover;
+
+}
+.profile-card{
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 4px;
+  box-shadow: hsla(0, 0%, 0%, .8) 10px 10px 80px;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100vw - 10px);
+}
+.profile-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+    
+}
+.name{
+    color:black;
+    text-align: center;
+    font-size: 4rem;
+}
+.prof{
+    color: white;
+    font-style:italic;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.intro{
+    text-align:center;
+    font-size:2rem;
+    padding-top:3rem;
+    padding-left:2rem;
+    padding-bottom: 2rem;
+}
+.scale-modelling{
+    font-size:1.5rem;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+favorites{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+.amv {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1rem;
+    font-size:1.5rem;
+    color: white;
+}
+amv-intro{
+    margin-top:1rem;
+    font-size:2rem;
+}
+.amv p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bye{
+    text-align:center;
+    font-size: 1.5rem;
+    font-style:italic;
+}
+.links{
+    margin-top:2rem;
+    text-align:center;
+    font-size:2.5rem;
+}
