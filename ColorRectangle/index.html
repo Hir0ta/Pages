@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2018 by HirOta-kun (http://jsbin.com/rehenob/4/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Colors</title>
-</head>
-<body>
-  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
-<script id="jsbin-javascript">
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
-var r=199;
-var g=79;
-var b=120;
-var x=80;
-var y=20;
-var w=40;
-var h=40;
-var space=5;
+  <head>
+      <meta charset="utf-8">
+      <title>Colors</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!--For icons-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script>
+        /*for JQuery scripts*/
+      </script>
+      <style>
+        *{box-sizing: border-box;}
+      </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+    <script id=>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var r=199;
+      var g=79;
+      var b=120;
+      var x=80;
+      var y=20;
+      var w=40;
+      var h=40;
+      var space=5;
 
-for(i=0;i<6;i++){
-  for(j=0;j<6;j++){
-    context.fillStyle= 'rgb('+ r +','+ g + ',' + b +')';
-    context.fillRect(x+j*(w+space),y+i*(h+space),w,h);
-    r=r-7;
-  }
-  b=b+15;
-  j=0;
-}
-  
-</script>
-</body>
+      for(i=0;i<6;i++){
+        for(j=0;j<6;j++){
+          context.fillStyle= 'rgb('+ r +','+ g + ',' + b +')';
+          context.fillRect(x+j*(w+space),y+i*(h+space),w,h);
+          r=r-7;
+        }
+        b=b+15;
+        j=0;
+      }
+    </script>
+  </body>
 </html>

@@ -1,46 +1,54 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2018 by HirOta-kun (http://jsbin.com/likotij/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
 <meta name="robots" content="noindex">
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Pyramid</title>
-</head>
-<body>
-  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
-<script id="jsbin-javascript">
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
-var dist=3;
-var i=0;
-var startX;
-var startY=150;
-var destX=225;
-var destY;
+  <head>
+    <meta charset="utf-8">
+    <title>Pyramid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--For icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      /*for JQuery scripts*/
+    </script>
+    <style>
+      *{box-sizing: border-box;}
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+    <script id="jsbin-javascript">
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var dist=3;
+    var i=0;
+    var startX;
+    var startY=150;
+    var destX=225;
+    var destY;
 
-for(i;i<=150;i++){
-  startX=i*dist;
-  if(startX%2==0){
-    destY=0;
-  }else{
-    destY=300;
-  }
-  context.strokeStyle='red';
-  context.beginPath();
-  context.moveTo(startX,startY);
-  context.lineTo(destX,destY);
-  context.fill();
-  context.stroke();
-}
-
-</script>
-</body>
+    for(i;i<=150;i++){
+      startX=i*dist;
+      if(startX%2==0){
+        destY=0;
+      }else{
+        destY=300;
+      }
+      context.strokeStyle='red';
+      context.beginPath();
+      context.moveTo(startX,startY);
+      context.lineTo(destX,destY);
+      context.fill();
+      context.stroke();
+    }
+    </script>
+  </body>
 </html>

@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <script src="turbine.js"></script>
-  <title>Turbine Check</title>
-</head>
-<body>
-  <script id= "turbineCounter">
-    var maxTurbines=25;
-    var turbinePower=0;
-    var sumPower=0;
-    var x=1;
-    for (x; x<=maxTurbines; x++){
-      if (x<=10) {
-        turbinPower=2000;
-        sumPower+=turbinPower;
-        console.log ('A(z) ' +  x + '. számú szélturbina teljes fordulaton működik, ' + turbinePower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
-      }else if (x<=20) {
-        turbinPower=1000;
-        sumPower+=turbinPower;
-        console.log ('A(z) '+ x + '.számú szélturbina fél fordulaton működik, ' + turbinPower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
-      }else {
-        turbinePower=0;
-        sumPower+=turbinePower;
-        console.log ('A(z) ' + x + '. számú szélturbina áll, '+ turbinePower + 'MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.');
+  <head>
+    <meta charset="utf-8">
+    <title>Turbine check</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--For icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+      /*for JQuery scripts*/
+    </script>
+    <style>
+      *{box-sizing: border-box;}
+    </style>
+  </head>
+  <body>
+    <div id='report' align="center" style='margin:5px 5px; border:1px solid black'></div>
+    <script id= "turbineCounter">
+      var maxTurbines=25;
+      var turbinePower=0;
+      var sumPower=0;
+      var x=1;
+      var report='';
+      for (x; x<=maxTurbines; x++){
+        if (x<=10) {
+          turbinePower=2000;
+          sumPower+=turbinePower;
+          report +=  'A(z) ' +  x + '. számú szélturbina teljes fordulaton működik, ' + turbinePower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.' + '<br>';
+          //debug
+          //console.log(report)
+          document.getElementById('report').innerHTML=report;
+        }else if (x<=20) {
+          turbinePower=1000;
+          sumPower+=turbinePower;
+          report +=  'A(z) '+ x + '.számú szélturbina fél fordulaton működik, ' + turbinePower + ' MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.' + '<br>';
+          //debug
+          //console.log(report)
+          document.getElementById('report').innerHTML=report;
+        }else {
+          turbinePower=0;
+          sumPower+=turbinePower;
+          report +=  'A(z) ' + x + '. számú szélturbina áll, '+ turbinePower + 'MWh áramot termelve. A farm összteljesítménye jelenleg ' + sumPower + ' MWh.' + '<br>';
+        }
+        //debug
+        //console.log(report)
+        document.getElementById('report').innerHTML=report;
       }
-    }
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>

@@ -1,65 +1,68 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
 
-Copyright (c) 2018 by HirOta-kun (http://jsbin.com/hafokoq/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Brood comb</title>
-</head>
-<body>
-  <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
-<script id="jsbin-javascript">
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
+  <head>
+      <meta charset="utf-8">
+      <title>Brood Comb</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!--For icons-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Popper JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <script>
+        /*for JQuery scripts*/
+      </script>
+      <style>
+        *{box-sizing: border-box;}
+      </style>
+  </head>
+  <body>
+    <canvas id='myCanvas' height='300' width='450' style='border: 1px solid black'></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      // hexagon
+      var numberOfSides = 6;
+      var size=30;
+      var Xcenter=canvas.width/2;
+      var Ycenter=canvas.height/2;
+      var space=5;
+      var newX;
+      var newY;
 
+      function hexagon(Xcenter, Ycenter){ 
+        context.beginPath();
+        context.moveTo (Xcenter +  size * Math.cos(0), Ycenter +  size * Math.sin(0));          
+        for (var i = 1; i <= numberOfSides;i++) {
+          context.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+        }
+        context.strokeStyle = 'red';
+        context.lineWidth = 1;
+        context.stroke();
+        return;
+      }
+      //make the center hexagon:
+      hexagon(Xcenter,Ycenter,size);
+      //make the empty hexagons:
+      for (j = 1; j <= 9; j++){
+        if (j % 2 !=0){
+          newX = Xcenter + Math.cos(j * (2 * Math.PI / 12)) * (2 * size);
+          newY = Ycenter - Math.sin(j * (2 * Math.PI / 12)) * (2 * size);
+          hexagon(newX,newY,size);
+        }
+      }
+      //make the filled hexagon:
+      hexagon(Xcenter + Math.cos(11 * (2 * Math.PI / 12)) * (2 * size),Ycenter - Math.sin(11 * (2 * Math.PI / 12)) * (2 * size),size);
+      context.fillStyle = 'red';
+      context.fill();
 
-// hexagon
-var numberOfSides = 6;
-var size=30;
-var Xcenter=canvas.width/2;
-var Ycenter=canvas.height/2;
-var space=5;
-var newX;
-var newY;
-
-function hexagon(Xcenter, Ycenter){ 
-  context.beginPath();
-  context.moveTo (Xcenter +  size * Math.cos(0), Ycenter +  size * Math.sin(0));          
- 
-  for (var i = 1; i <= numberOfSides;i++) {
-    context.lineTo (Xcenter + size * Math.cos(i * 2 * Math.PI / numberOfSides), Ycenter + size * Math.sin(i * 2 * Math.PI / numberOfSides));
-}
-  context.strokeStyle = 'red';
-  context.lineWidth = 1;
-  context.stroke();
-  return;
-}
-
-
-
-hexagon(Xcenter,Ycenter,size);
-
-for (j = 1; j <= 9; j++){
-  
-  if (j % 2 !=0){
-    newX = Xcenter + Math.cos(j * (2 * Math.PI / 12)) * (2 * size);
-    newY = Ycenter - Math.sin(j * (2 * Math.PI / 12)) * (2 * size);
-    hexagon(newX,newY,size);
-  }
-}
-hexagon(Xcenter + Math.cos(11 * (2 * Math.PI / 12)) * (2 * size),Ycenter - Math.sin(11 * (2 * Math.PI / 12)) * (2 * size),size);
-context.fillStyle = 'red';
-context.fill();
-
-    
-</script>
-</body>
+    </script>
+  </body>
 </html>
