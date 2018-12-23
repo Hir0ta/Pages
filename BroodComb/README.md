@@ -10,4 +10,4 @@ Making a brood comb structure whit the help of javascript
 
 # Live version
 
-https://output.jsbin.com/hafokoq
+https://hirota.atw.hu/broodcomb

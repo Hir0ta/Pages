@@ -10,4 +10,4 @@
 
 # Live version
 
-https://output.jsbin.com/gahuxad
+https://hirota.atw.hu/colorfull_rectangles

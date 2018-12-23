@@ -10,4 +10,4 @@ A clock what is change it's color! Every second it changes the shade,every minut
 
 # Live version
 
-https://output.jsbin.com/kejowat
+https://hirota.atw.hu/colorclock

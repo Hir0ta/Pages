@@ -10,4 +10,4 @@ A business card for Attila Nagy
 
 # Live version
 
-https://output.jsbin.com/xehesev
+https://hirota.atw.hu/bussinescard
