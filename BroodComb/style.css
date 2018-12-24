@@ -1,0 +1,33 @@
+body{
+    background-color: grey;
+}
+.myCanvas{
+    width: 80%; 
+    height: 60%; 
+    border: 1px solid black;
+    display:block;
+}
+.myForm{
+    display: block;
+    width: 20rem;
+}
+.sizeChange{
+    display: inline-block;
+}
+.colorChange{
+    display: inline-block;
+}
+#slider{
+    margin-top: 1rem;
+}
+#custom-handle {
+    width: 3rem;
+    height: 1.6rem;
+    top: 50%;
+    margin-top: -.8rem;
+    text-align: center;
+    line-height: 1.6rem;
+}
+.buttons{
+    margin-top: 1rem;
+}
