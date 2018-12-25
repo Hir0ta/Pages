@@ -10,4 +10,4 @@ It randomly generates 100 pieces of x;y coordinates and draws a line from them t
 
 # Live version
 
-https://output.jsbin.com/jubesur
+https://hir0ta.000webhostapp.com/index.php?lap=hyperspace
