@@ -4,9 +4,11 @@ A simple guess the number game! It thinks a number between 1 to 100. You will ha
 
 # Made with
 
-  - HTML5
+  - HTML
+  - CSS
   - JavaScript
+  - Bootstrap
 
 # Live version
 
-https://output.jsbin.com/rapufot/3
+https://hir0ta.000webhostapp.com/index.php?lap=guess_the_number
