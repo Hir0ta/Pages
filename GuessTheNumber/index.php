@@ -1,48 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!--For icons-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-  </head>
-  <body class="text-danger">
-    <div class="row">
-      <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1>Wanna play a game?</h1>
-        <p>I tell you what's gonna be: I think about a number between 1 and 100! You will try to guess it! You will have 10 try! I will even tell you if your guess is low or hi! If you can't guess it correctly on the 10th try...well you can restart the game! ;) </p>
-        <h2>Let's the game begin!<h2>
-        <br><br>
-      </div>
-      <br><br>
-      <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p class = "guesses"></p>
-        <p class = "lastResult"></p>
-        <p class = "lowOrHi"></p>
-      </div>
-      <div class="field content col-xs-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center">
-        <label for="guessField">Enter a guess:</label>
-      </div>
-      <div class="field col-xs-10 col-sm-10 col-md-12 col-lg-12 d-flex justify-content-center">
-        <input type="text" id="guessField" class="guessField">
+  <div class="panel-body">
+    <h1>Wanna play a game?</h1>
+    <p>I tell you what's gonna be: I think about a number between 1 and 100! You will try to guess it! You will have 10 try! <br> 
+        I will even tell you if your guess is low or high! If you can't guess it correctly on the 10th try...well you can restart the game! ;) </p>
+    <h2>Let's the game begin!<h2>
+    <div class="guessContainer">
+      <p class = "guesses"></p>
+      <p class = "lastResult"></p>
+      <p class = "lowOrHi"></p>
+      <div class="field" id="field">
+        <label for="guessField">Enter a guess: </label><input type="number" id="guessField" class="guessField">
         <input type="submit" value="Submit" class="guessSubmit">
       </div>
     </div>
-    <script>
+  </div>
+  <br>
+  <script>
       var randomNumber = Math.floor(Math.random()*100) +1;
       //debug
-      //console.log(randomNumber);
+      console.log(randomNumber);
       var guesses = document.querySelector(".guesses");
       var lastResult = document.querySelector(".lastResult");
       var lowOrHi = document.querySelector(".lowOrHi");
@@ -89,10 +64,7 @@
         guessSubmit.disabled = true;
         resetButton = document.createElement("button");
         resetButton.textContent = "Start new game";
-        //resetButton.id = "::reset";
-        //resetButton.style.cssText = "margin-left: 1rem";
-        //document.getElementById("reset.Write").appendChild(resetButton);
-        document.body.appendChild(resetButton);
+        document.getElementById("field").appendChild(resetButton);
         resetButton.addEventListener("click",resetGame);
       }
       //reset the game:
@@ -107,11 +79,12 @@
         guessSubmit.disabled = false;
         guessField.value = "";
         guessField.focus();
-        lastResult.style.backgroundColor = "white";
+        lastResult.style.backgroundColor = "";
+        lastResult.textContent = "";
+        guesses.textContent = "";
         randomNumber = Math.floor(Math.random()*100) +1;
         //debug
         //console.log(randomNumber);
       }
     </script>
-  </body>
-</html>
+  </div>

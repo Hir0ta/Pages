@@ -1,25 +1,26 @@
-body{
-    background-image: url("http://images6.fanpop.com/image/photos/37300000/saw-wallpaper-saw-37325235-1920-1080.jpg");
+.panel-body{
+    background-image: url("img/saw.jpg");
     background-size: cover;
+    color: rgba(255, 44, 44, 0.9);
+    margin-top:-5rem;
+    margin-bottom: -10rem !important;
+    height: 100vh;
+    width: 100vw;
 }
 h1,h2{
     text-align: center;
+    margin-top: 3rem !important;
 }
-.resetButton{
-    
+p{
+    margin-left: 1rem;
+    margin-top: 2rem !important;
 }
-.content{
+.guessContainer{
+    margin-top: 5rem !important;
     margin-right: 1rem !important;
     margin-left: 1rem !important;
+    
 }
-.game {
-    margin: 0, auto !important;
-    text-align: center !important;
-}
-.row {
-    height: 100vh;
-}
-.field{
-    width: 7rem;
-    height: 1.75rem;
+.guessField{
+    width: 20rem;
 }
