@@ -10,4 +10,4 @@
 
 # Live version
 
-https://hirota.atw.hu/colorfull_rectangles
+https://hir0ta.000webhostapp.com/index.php?lap=color_rect
