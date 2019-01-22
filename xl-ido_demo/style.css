@@ -196,3 +196,15 @@ a.nav-link{
     margin: auto;
     text-align: center;
 }
+.furl{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.table{
+    margin-left: 14rem;
+    margin-top: 2rem;
+}
+.save{
+    margin-left: 14rem;
+}

@@ -59,7 +59,7 @@
                     <a href="#tavolSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Távollétek</a>
                     <ul class="collapse " id="tavolSubmenu">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="index.php?lap=new_event">Új esemény</a>
                         </li>
                         <li>
                             <a href="#">Page 2</a>
@@ -85,7 +85,7 @@
                 </li>
                 <nav class="sidebar navbar navbar-expand-md navbar-light">
                     <div class="container">
-                        <button type="button" id="desktopToggle" class="btn btn-success">
+                        <button type="button" id="desktopToggle" class="furl btn btn-success">
                             << Összecsuk
                         </button>
                     </div>
@@ -128,13 +128,13 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="index.php?lap=settings">
                                     <span class="fas fa-cog"></span>
                                 </a>
                             </li>
                             
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="login.html">
+                                <a class="nav-link" href="main.html">
                                     <span class="fas fa-power-off"></span>
                                 </a>
                             </li>
@@ -142,9 +142,11 @@
                     </div>
                 </nav>
             </div>
-            <div class="panel">
+            <div class="panel d-flex justify-content-center">
                 <?php
-                    if($_GET['lap'] == "settings") include "settings.php";
+                    ERROR_REPORTING (E_PARSE | E_ERROR);
+                    if ($_GET['lap'] == "settings") include "settings.php";
+                    if ($_GET['lap'] == "new_event") include "new_event.php";
                 ?>
             </div>
         </div>
