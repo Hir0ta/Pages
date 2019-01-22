@@ -1,0 +1,55 @@
+body{
+    background-image: url("images/reg_1920x1080_hatter.jpg");
+    background-repeat: no-repeat;
+}
+.logo{
+    width: 1rem !important;
+}
+.main{
+    margin-top: 50%;
+    background-image: url("images/reg_1920x1080_kozep.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 30rem !important;
+    height: 27rem !important;
+    position: relative;
+}
+/* Tablet Screen Styles */
+@media (min-width: 768px){
+    .main{
+        margin-top: 15%;
+    }
+    .intro{
+        color: white;
+        padding-top: 6rem;
+        text-align: justify;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        font-size: 0.9rem;
+        line-height: 0.9375rem;
+        margin-left: 0 !important;
+    }
+    .buttons{
+        margin-left: 0 !important;
+    }
+}
+.intro{
+    color: white;
+    padding-top: 6rem;
+    margin-left: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 0.9375rem;
+}
+.buttons{
+    margin-left: 2rem;
+}
+button{
+    margin: 2rem !important;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    width: 10rem;
+}

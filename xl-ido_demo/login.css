@@ -1,0 +1,51 @@
+body{
+    background-image: url("images/belepes_1920x1080_hatter.jpg");
+    background-repeat: no-repeat;
+}
+.login{
+    margin-top: 50%;
+    background-image: url("images/belepes_1920x1080_kozep.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 30rem !important;
+    height: 27rem !important;
+    position: relative;
+}
+/* Tablet Screen Styles */
+@media (min-width: 768px){
+    .login{
+        margin-top: 15%;
+    }
+}
+.login-form{
+    margin-top: 30%;
+}
+p{
+    display: table-cell !important;
+    color: white;
+}
+input{
+    width: 100% !important;
+    display: table-cell !important;
+    margin-bottom: 1rem !important;
+    border-radius: 5px;
+}
+.checkbox{
+    margin: 0 !important;
+    width: 1rem !important;
+    color: white;
+}
+.login-button{
+    color:black;
+}
+button{
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    width: 10rem;
+}
+.links{
+    color: yellow !important;
+    margin: 0.5rem;
+}
