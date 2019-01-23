@@ -21,6 +21,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!--Gijgo CSS-->
+    <link href="node_modules/gijgo/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <!--Gijgo JS-->
+    <script src="node_modules/gijgo/js/gijgo.min.js" type="text/javascript"></script>
+    <!--Gijgo Languages-->
+    <script src="node_modules/gijgo/js/messages/messages.fr-fr.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.bg-bg.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.de-de.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.pt-br.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.ru-ru.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.es-es.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.it-it.js" type="text/javascript"></script>
+    <script src="node_modules/gijgo/js/messages/messages.hu-hu.js" type="text/javascript"></script>
+    <!--Fixed Table-->
+    <script src="FixedTable/tableHeadFixer.js"></script>
     <!--Own Code-->
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -39,7 +54,7 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Munkaidő adatok</a>
                     <ul class="collapse " id="homeSubmenu">
                         <li>
-                            <a href="#">Főmenü</a>
+                            <a href="index.php">Főmenü</a>
                         </li>
                         <li>
                             <a href="#">Jelenlétiív kitöltése</a>
@@ -73,7 +88,7 @@
                     <a href="#docsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Dokumentumok</a>
                     <ul class="collapse " id="docsSubmenu">
                         <li>
-                            <a href="#">Page 1</a>
+                            <a href="index.php?lap=table">Böszme nagy táblázat</a>
                         </li>
                         <li>
                             <a href="#">Page 2</a>
@@ -142,11 +157,12 @@
                     </div>
                 </nav>
             </div>
-            <div class="panel d-flex justify-content-center">
+            <div class="panel">
                 <?php
                     ERROR_REPORTING (E_PARSE | E_ERROR);
                     if ($_GET['lap'] == "settings") include "settings.php";
                     if ($_GET['lap'] == "new_event") include "new_event.php";
+                    if ($_GET['lap'] == "table") include "table.php";
                 ?>
             </div>
         </div>

@@ -149,6 +149,10 @@ a.nav-link{
     display: inline-block;
 
 }
+.button{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
 .form{
     margin-top: -1.3rem;
     width: 12rem;
@@ -201,10 +205,104 @@ a.nav-link{
     border: none;
     background: none;
 }
-.table{
-    margin-left: 14rem;
+.table-responsive{
     margin-top: 2rem;
+    width: 100vw;
 }
-.save{
-    margin-left: 14rem;
+.table-striped{
+    margin: -0.5rem;
+}
+.modal-content{
+    background: #31a243;
+}
+.modal-body{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.confirm{
+    color: #112316;
+}
+.btn-outline-secondary{
+    background: #31a243 !important;
+}
+.input-group{
+    width: 60% !important;
+}
+.row{
+    margin-top: 1rem !important;
+}
+.data{
+    margin-right: 2rem !important;
+    margin-bottom: 1rem !important;
+    background: white;
+}
+.commentData{
+    padding-right: 13rem !important;
+}
+.event{
+    width: 100%;
+}
+.event-comment{
+    width: 100%;
+}
+.comment{
+    height: 2.5rem !important;
+}
+.commentInput{
+    margin-right: 2rem !important;
+}
+@media (min-width: 768px) {
+    .event{
+        width: 57rem !important;
+    }
+    .event-comment{
+        width: 20rem !important;
+    }
+    .data{
+        margin-right: 1rem !important;
+        text-align: left !important;
+    }
+    .commentData{
+        padding-right: 9.5rem !important;
+    }
+    .row.event-comment{
+        width: 100% !important;
+    }
+    .data{
+        margin-bottom: 0 !important;
+    }
+}
+.datepicker{
+    background: #4ebd5f !important;
+}
+.timepicker [role="header"] {
+    background: #4ebd5f !important;
+    color: black !important;
+}
+.timepicker{
+    background: #112316 !important;
+}
+.timepicker [role="footer"] {
+    background: #4ebd5f !important;
+}
+.timepicker [role="hour"] {
+    color: black !important;
+}
+.timepicker [role="minute"] {
+    color: black !important;
+}
+.timepicker .selected {
+    color: white !important;
+}
+.timepicker [role="body"] [role="dial"] {
+    background: #4ebd5f !important;
+}
+#parent {
+    height: 18.75rem;
+    width: 97vw;
+    margin-top: 5rem;
+}
+
+.info{
+    background-color: #dee2e6;
 }
