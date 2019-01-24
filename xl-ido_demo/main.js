@@ -18,7 +18,7 @@ $(document).ready(function () {
             });
         });
     }
-    $('timepicker')
+    /*Date and time picker*/
     $('#datepicker').datepicker({
         locale: 'hu-hu',
         format: 'yyyy mm dd',
@@ -28,7 +28,7 @@ $(document).ready(function () {
         locale: 'hu-hu',
         uiLibrary: 'bootstrap4'
     });
-    
+    /*Table*/
     $(document).ready(function() {
         $("#fixTable").tableHeadFixer({"left" : 1}); 
     });

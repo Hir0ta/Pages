@@ -2,8 +2,8 @@
 
   <div id="parent">
     <table id="fixTable" class="table table-striped table-bordered">
-      <thead class="">
-        <tr class="info table-bordered">
+      <thead class="tableHead">
+        <tr class=" info table-bordered">
           <th>Ano</th>
           <th>Jan</th>
           <th>Fev</th>
@@ -34,6 +34,10 @@
           <th>Place</th>
           <th>Place</th>
         </tr>
+        <tr>
+          <th class="space" colspan="28"></th>
+        </tr> 
+
       </thead>
       <tbody>
         <tr>
